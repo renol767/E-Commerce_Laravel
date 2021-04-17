@@ -17,14 +17,14 @@ class CreateProductsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             // sku,name,price,weight,width,height,depth,slug,short_description,description,status
-            $table->string('sku');
+            $table->string('sku')->nullable();
             $table->string('name');
-            $table->string('slug');
+            $table->string('slug')->nullable();
             $table->decimal('price', 15, 2);
             $table->decimal('weight', 10, 2);
             $table->decimal('width', 10, 2);
             $table->decimal('height', 10, 2);
-            $table->decimal('depth', 10, 2);
+            $table->decimal('length', 10, 2);
             $table->text('short_description');
             $table->text('description');
             $table->integer('status');
